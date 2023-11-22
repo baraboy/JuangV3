@@ -586,6 +586,9 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                                         let moveAction = SKAction.move(to: finalPosition, duration: moveDuration)
                                         gun.run(moveAction)
                                     }
+                                    
+                                    let defaults = UserDefaults.standard
+                                    defaults.set(true, forKey: "isMissionTwoPassed")
                                 }
                             }
                             else {

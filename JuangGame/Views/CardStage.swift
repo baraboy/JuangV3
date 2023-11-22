@@ -19,8 +19,8 @@ class CardStage: SKScene {
     let cardTwoAtlas = SKTextureAtlas(named: "cardTwo")
     var animasiTwoTextures: [SKTexture] = []
     
-    private var blockCardTwo: SKSpriteNode?
-    private var blockCardThree: SKSpriteNode?
+    private var blockCardTwo = SKSpriteNode()
+    private var blockCardThree = SKSpriteNode()
     private var textCard: SKSpriteNode?
     private var line1: SKSpriteNode?
     private var line2: SKSpriteNode?
@@ -76,11 +76,28 @@ class CardStage: SKScene {
             animasiTwoTextures.append(texture)
         }
         
-        blockCardThree = childNode(withName: "blockCardThree") as? SKSpriteNode
-        blockCardThree?.position = CGPoint(x: size.width * 0.38125352, y: -size.height * 0.18687786)
+        let blockCardTwoTexture = SKTexture(imageNamed: "cardLock1")
+        let blockCardTwo = SKSpriteNode(texture: blockCardTwoTexture)
+        blockCardTwo.name = "blockCardTwo"
+        blockCardTwo.size = CGSize(width: 120, height: 150)
+        blockCardTwo.zPosition = 50
+        blockCardTwo.position = CGPoint(x: size.width * 0.13360094, y: -size.height * 0.00876081)
+        addChild(blockCardTwo)
         
-        blockCardTwo = childNode(withName: "blockCardTwo") as? SKSpriteNode
-        blockCardTwo?.position = CGPoint(x: size.width * 0.13360094, y: -size.height * 0.00876081)
+        let blockCardThreeTexture = SKTexture(imageNamed: "cardLock1")
+        let blockCardThree = SKSpriteNode(texture: blockCardThreeTexture)
+        blockCardThree.name = "blockCardThree"
+        blockCardThree.size = CGSize(width: 120, height: 150)
+        blockCardThree.zPosition = 50
+        blockCardThree.position = CGPoint(x: size.width * 0.38125352, y: -size.height * 0.18687786)
+        addChild(blockCardThree)
+        
+        
+//        blockCardThree = childNode(withName: "blockCardThree") as? SKSpriteNode
+//        blockCardThree?.position = CGPoint(x: size.width * 0.38125352, y: -size.height * 0.18687786)
+//        
+//        blockCardTwo = childNode(withName: "blockCardTwo") as? SKSpriteNode
+//        blockCardTwo?.position = CGPoint(x: size.width * 0.13360094, y: -size.height * 0.00876081)
         
         line1 = childNode(withName: "line1") as? SKSpriteNode
         line1?.position = CGPoint(x: -size.width * 0.24413146, y: -size.height * 0.0990916)
@@ -103,10 +120,46 @@ class CardStage: SKScene {
             cardTwoAnimation(for: cardTwo)
             isCardOneAnimating = false
             cardOne.removeAllActions()
+            
+            blockCardTwo.size = CGSize(width: 120, height: 150)
+            blockCardTwo.texture = SKTexture(imageNamed: "cardLock")
+            blockCardTwo.position = CGPoint(x: size.width * 0.13360094, y: -size.height * 0.00876081)
+            
+            blockCardThree.size = CGSize(width: 120, height: 150)
+            blockCardThree.texture = SKTexture(imageNamed: "cardLock")
+            blockCardThree.position = CGPoint(x: size.width * 0.38125352, y: -size.height * 0.18687786)
+            
         } else {
             cardTwo.size = CGSize(width: 120, height: 150)
             cardTwo.texture = SKTexture(imageNamed: "cardLock1")
             cardTwo.position = CGPoint(x: -size.width * 0.11267606, y: -size.height * 0.20468957)
+            
+            blockCardTwo.size = CGSize(width: 120, height: 150)
+            blockCardTwo.texture = SKTexture(imageNamed: "cardLock1")
+            blockCardTwo.position = CGPoint(x: size.width * 0.13360094, y: -size.height * 0.00876081)
+            
+            blockCardThree.size = CGSize(width: 120, height: 150)
+            blockCardThree.texture = SKTexture(imageNamed: "cardLock1")
+            blockCardThree.position = CGPoint(x: size.width * 0.38125352, y: -size.height * 0.18687786)
+        }
+        
+        if UserDefaults.standard.bool(forKey: "isMissionTwoPassed") {
+            blockCardTwo.size = CGSize(width: 120, height: 150)
+            blockCardTwo.texture = SKTexture(imageNamed: "cardLock")
+            blockCardTwo.position = CGPoint(x: size.width * 0.13360094, y: -size.height * 0.00876081)
+            
+            blockCardThree.size = CGSize(width: 120, height: 150)
+            blockCardThree.texture = SKTexture(imageNamed: "cardLock")
+            blockCardThree.position = CGPoint(x: size.width * 0.38125352, y: -size.height * 0.18687786)
+            
+        } else {
+            blockCardTwo.size = CGSize(width: 120, height: 150)
+            blockCardTwo.texture = SKTexture(imageNamed: "cardLock1")
+            blockCardTwo.position = CGPoint(x: size.width * 0.13360094, y: -size.height * 0.00876081)
+            
+            blockCardThree.size = CGSize(width: 120, height: 150)
+            blockCardThree.texture = SKTexture(imageNamed: "cardLock1")
+            blockCardThree.position = CGPoint(x: size.width * 0.38125352, y: -size.height * 0.18687786)
         }
         
         SoundManager.shared.stopSpyMusic()
