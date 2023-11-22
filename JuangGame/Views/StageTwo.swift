@@ -653,7 +653,10 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                         Character.shared.characterAnimationSkill(characterTexture: heroBantPushTextures, hero: hero, skill: Character.shared.bantengAnimationName)
                         
                         for index in 0...4 {
-                            boxDorong[index].physicsBody?.isDynamic = true
+                            if hero.intersects(boxDorong[index]){
+                                boxDorong[index].physicsBody?.isDynamic = true
+                                boxDorong[index].physicsBody?.velocity = CGVector(dx: 100, dy: 0)
+                            }
                         }
                     }
                 }
