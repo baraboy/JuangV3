@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16047E312B0DED5800D17AE6 /* Story 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E302B0DED5800D17AE6 /* Story 3.wav */; };
 		33FCAE902B0CAAE800444A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE8F2B0CAAE800444A8B /* AppDelegate.swift */; };
 		33FCAE962B0CAAE800444A8B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE952B0CAAE800444A8B /* GameScene.swift */; };
 		33FCAE982B0CAAE800444A8B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE972B0CAAE800444A8B /* GameViewController.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16047E302B0DED5800D17AE6 /* Story 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 3.wav"; sourceTree = "<group>"; };
 		33FCAE8C2B0CAAE800444A8B /* JuangGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuangGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FCAE8F2B0CAAE800444A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33FCAE952B0CAAE800444A8B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		F7E881732B0DB5AD00828CA0 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				16047E302B0DED5800D17AE6 /* Story 3.wav */,
 				F7E881742B0DB5C900828CA0 /* Condition */,
 				33FCAEBA2B0CAB2A00444A8B /* storySound.mp3 */,
 				33FCAEBB2B0CAB2A00444A8B /* spySong.wav */,
@@ -416,6 +419,7 @@
 				33FCAF052B0CAB2A00444A8B /* Story 6.wav in Resources */,
 				33FCAF0A2B0CAB2A00444A8B /* cardPerStageMusic.mp3 in Resources */,
 				33FCAF022B0CAB2A00444A8B /* Story 5.wav in Resources */,
+				16047E312B0DED5800D17AE6 /* Story 3.wav in Resources */,
 				33FCAF1A2B0CAB2A00444A8B /* StoryEnam.sks in Resources */,
 				33FCAF102B0CAB2A00444A8B /* StageOne.sks in Resources */,
 				33FCAF0F2B0CAB2A00444A8B /* BgPolos.sks in Resources */,
@@ -618,7 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LH73CAYKFH;
+				DEVELOPMENT_TEAM = 3RH672H945;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Juang;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
@@ -651,7 +655,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LH73CAYKFH;
+				DEVELOPMENT_TEAM = 3RH672H945;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Juang;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";

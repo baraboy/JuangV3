@@ -33,6 +33,7 @@ class StoryLima: SKScene {
         SoundManager.shared.stopVoiceStory4()
         SoundManager.shared.stopVoiceStory5()
         SoundManager.shared.stopVoiceStory6()
+        SoundManager.shared.stopVoiceStory3()
         
         background = childNode(withName: "background") as? SKSpriteNode
         background?.size = self.size

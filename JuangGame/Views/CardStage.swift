@@ -120,6 +120,7 @@ class CardStage: SKScene {
         SoundManager.shared.stopVoiceStory4()
         SoundManager.shared.stopVoiceStory5()
         SoundManager.shared.stopVoiceStory6()
+        SoundManager.shared.stopVoiceStory3()
         
         if UserDefaults.standard.bool(forKey: "SoundActive") {
             SoundManager.shared.playCardPerSceneSound()

@@ -52,6 +52,7 @@ class StorySatu: SKScene {
         SoundManager.shared.stopVoiceStory4()
         SoundManager.shared.stopVoiceStory5()
         SoundManager.shared.stopVoiceStory6()
+        SoundManager.shared.stopVoiceStory3()
         
         soundButton = SoundButtonStory(screenIdentifier: "StorySatu")
         soundButton.size = CGSize(width: size.width * 0.07042254, height: size.height * 0.15267176)

@@ -39,8 +39,9 @@ class SoundButtonStory: SKSpriteNode {
                 case "StoryDua":
                     SoundManager.shared.stopVoiceStory2()
                 case "StoryTiga":
-                    SoundManager.shared.stopVoiceStory3_1()
-                    SoundManager.shared.stopVoiceStory3_2()
+//                    SoundManager.shared.stopVoiceStory3_1()
+//                    SoundManager.shared.stopVoiceStory3_2()
+                    SoundManager.shared.stopVoiceStory3()
                 case "StoryEmpat":
                     SoundManager.shared.stopVoiceStory4()
                 case "StoryLima":
@@ -55,13 +56,14 @@ class SoundButtonStory: SKSpriteNode {
             
             switch screenIdentifier {
                 case "StorySatu":
-                SoundManager.shared.playVoiceStory1(withDelay: 0.4)
+                    SoundManager.shared.playVoiceStory1(withDelay: 0.4)
                 case "StoryDua":
                     SoundManager.shared.playVoiceStory2()
                 case "StoryTiga":
-                    SoundManager.shared.playVoiceStory3_1 {
-                        SoundManager.shared.playVoiceStory3_2(withDelay: 3.0)
-                    }
+//                    SoundManager.shared.playVoiceStory3_1 {
+//                        SoundManager.shared.playVoiceStory3_2(withDelay: 3.0)
+//                    }
+                    SoundManager.shared.playVoiceStory3()
                 case "StoryEmpat":
                     SoundManager.shared.playVoiceStory4()
                 case "StoryLima":

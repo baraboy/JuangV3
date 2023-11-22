@@ -44,9 +44,10 @@ class StoryTiga: SKScene {
         
         if UserDefaults.standard.bool(forKey: "SoundActive") {
             SoundManager.shared.playBackgroundMusic()
-            SoundManager.shared.playVoiceStory3_1 {
-                SoundManager.shared.playVoiceStory3_2(withDelay: 3.0)
-            }
+//            SoundManager.shared.playVoiceStory3_1 {
+//                SoundManager.shared.playVoiceStory3_2(withDelay: 3.0)
+//            }
+            SoundManager.shared.playVoiceStory3()
         }
         
         if UserDefaults.standard.bool(forKey: "isHaveReadStory") {

@@ -238,6 +238,7 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
         SoundManager.shared.stopVoiceStory4()
         SoundManager.shared.stopVoiceStory5()
         SoundManager.shared.stopVoiceStory6()
+        SoundManager.shared.stopVoiceStory3()
         
         cameraNode = childNode(withName: "Camera") as? SKCameraNode
         

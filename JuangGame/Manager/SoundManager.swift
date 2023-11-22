@@ -23,6 +23,7 @@ class SoundManager {
     var voiceStory4: AVAudioPlayer?
     var voiceStory5: AVAudioPlayer?
     var voiceStory6: AVAudioPlayer?
+    var voiceStory3: AVAudioPlayer?
     
     private init () {
         if let soundURL = Bundle.main.url(forResource: "storySound", withExtension: "mp3") {
@@ -163,6 +164,16 @@ class SoundManager {
                 print("Error to play")
             }
         }
+        
+        if let voiceOverStory3 = Bundle.main.url(forResource: "Story 3", withExtension: "wav") {
+            do {
+                voiceStory3 = try AVAudioPlayer(contentsOf: voiceOverStory3)
+                voiceStory3?.prepareToPlay()
+            } catch {
+                print("Error to play")
+            }
+        }
+
     }
     
     func playDelayed(sound: AVAudioPlayer, delay: TimeInterval) {
@@ -246,6 +257,17 @@ class SoundManager {
     
     func stopVoiceStory2() {
         voiceStory2?.stop()
+    }
+    
+    func playVoiceStory3() {
+    if let player = voiceStory3 {
+            player.currentTime = 0
+            player.play()
+        }
+    }
+    
+    func stopVoiceStory3() {
+        voiceStory3?.stop()
     }
     
     func playVoiceStory3_1(withCompletion completion: @escaping () -> Void) {
