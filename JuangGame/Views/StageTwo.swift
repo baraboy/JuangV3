@@ -57,6 +57,7 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
     var lampu2 = SKSpriteNode()
     var cahayatuas = SKSpriteNode()
     var putusListrik = false
+    var isSecondTuas = false
     
     //Tes Buat Mini Games
     var keluarMiniGames: SKSpriteNode!
@@ -64,7 +65,6 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
     var redSwitch = [SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), SKSpriteNode()]
     var isSwitchTapped = [false, false, false, false]
     var variant: SKSpriteNode!
-    var nodeClicked = 0
     //var blackNode: SKSpriteNode!
     var isJepangHidden = true
     var backgroundOverlayGames: SKSpriteNode!
@@ -109,28 +109,34 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
     let soundKeys = SKAction.playSoundFileNamed("keysCollected.wav", waitForCompletion: false)
     
     private var timerNode = SKLabelNode()
-    private var ellipse = SKShapeNode()
     var time: Int = 21 {
         didSet {
             if time >= 10 {
-                timerNode.text = "\(time)"
+                timerNode.text = "0\(time)"
             } else {
-                timerNode.text = "\(time)"
+                timerNode.text = "0\(time)"
             }
         }
     }
     
     private func countDown() -> Void {
-        if time <= 0 {
+        if time <= 1 {
             time = 0
             timerNode.isHidden = true
-            ellipse.isHidden = true
+            ellipseNode.isHidden = true
             isJepangHidden = false
             jepangEnemy.isHidden = false
             redNode.isHidden = true
             turnOnTheLamp()
         } else {
             time -= 1
+            if time == 2 {
+                let newEllipseTexture = SKTexture(imageNamed: "ellipse1")
+                ellipseNode.texture = newEllipseTexture
+            } else if time == 1 {
+                let newEllipseTexture = SKTexture(imageNamed: "ellipse2")
+                ellipseNode.texture = newEllipseTexture
+            }
         }
     }
     
@@ -139,10 +145,10 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
     var boxDorong = [SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), SKSpriteNode()]
     var trap = [SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), SKSpriteNode(), SKSpriteNode()]
     var buttonObstacle = SKSpriteNode()
+    var ellipseNode = SKSpriteNode()
     
     let trapAtlas = SKTextureAtlas(named: "trapObstacle")
     var animasiTrapTextures: [SKTexture] = []
-    
     
     var isLampTurnOn = false
     let boxAtlas = SKTextureAtlas(named: "boxAnimation")
@@ -218,9 +224,6 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         self.view?.isMultipleTouchEnabled = true
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillResignActive), name: UIApplication.willResignActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
         
         self.physicsWorld.contactDelegate = self
         //SoundManager.shared.playSpyMusic()
@@ -432,7 +435,11 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
-        
+        for i in 0..<trapAtlas.textureNames.count {
+            let textureName = "trapAnimation\(i)"
+            let texture = trapAtlas.textureNamed(textureName)
+            animasiTrapTextures.append(texture)
+        }
         
         for i in 0..<trapAtlas.textureNames.count {
             let textureName = "trapAnimation\(i)"
@@ -459,39 +466,6 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
         addTrap()
         addbuttonObstacle()
         addJepangEnemy()
-        
-    }
-    
-    deinit {
-        // Remove observers when the scene is deallocated
-        NotificationCenter.default.removeObserver(self)
-    }
-
-    // MARK: - Application Lifecycle Methods
-
-    @objc func applicationWillResignActive() {
-        // Pause the game when the app goes to the background
-        pauseGame()
-    }
-
-    @objc func applicationDidBecomeActive() {
-        // Resume the game when the app becomes active again
-        resumeGame()
-    }
-
-    // Add these methods to pause and resume the game
-    func pauseGame() {
-        // Pause any ongoing actions, animations, or game logic here
-        self.isPaused = true
-        virtualController = nil
-        print("pauseGame")
-    }
-
-    func resumeGame() {
-        // Resume the game when the app becomes active again
-        connectVirtualController()
-        self.isPaused = true
-        backgroundMenu.isHidden = false
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -527,24 +501,13 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
         if collision == bitMask.hero.rawValue | bitMask.jepangEnemy.rawValue {
             
             if !isJepangHidden {
-                lives -= 3
-                let lastElementIndex = heartsArray.count - 1
-                if heartsArray.indices.contains(lastElementIndex - 1) {
-                    let lastHeart = heartsArray[lastElementIndex]
-                    lastHeart.removeFromParent()
-                    heartsArray.remove(at: lastElementIndex)
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                        self.isInvincible = false
-                        //self.hero.removeAllActions()
-                    }
-                }
+                heartReducation(heart: 3)
             }
         }
         
         //Trap Condition
         if collision == bitMask.hero.rawValue | bitMask.trapSituation.rawValue && !isInvincible {
-            lives -= 1
+            heartReducation(heart: 1)
             isInvincible = false
             isJumping = false
             if isVibrateEnabled{
@@ -556,18 +519,6 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                     runTrapAnimation(for: trap[index])
                 }
             }
-            
-            let lastElementIndex = heartsArray.count - 1
-            if heartsArray.indices.contains(lastElementIndex - 1) {
-                let lastHeart = heartsArray[lastElementIndex]
-                lastHeart.removeFromParent()
-                heartsArray.remove(at: lastElementIndex)
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    self.isInvincible = false
-                    //self.hero.removeAllActions()
-                }
-            }
         }
         
         //Trap Animation
@@ -576,27 +527,15 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
             let trapSequence = SKAction.sequence([trapAction])
             trap.run(trapSequence)
         }
-        
         //Button Obstacle Condition
         if collision == bitMask.hero.rawValue | bitMask.buttonObstacle.rawValue && !isInvincible {
-            lives -= 3
+            heartReducation(heart: 3)
             isInvincible = false
             isJumping = false
             if isVibrateEnabled{
                 HapticManager.instance.notification(type: .error)
             }
             SoundManager.shared.playAlarmSound()
-            let lastElementIndex = heartsArray.count - 1
-            if heartsArray.indices.contains(lastElementIndex - 1) {
-                let lastHeart = heartsArray[lastElementIndex]
-                lastHeart.removeFromParent()
-                heartsArray.remove(at: lastElementIndex)
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    self.isInvincible = false
-                    //self.hero.removeAllActions()
-                }
-            }
         }
     }
     
@@ -667,8 +606,8 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                             self.isPaused = true
                             hero.isHidden = true
                             matiLampu?.zPosition = 1
-                            cahaya.zPosition = 10
-                            cahaya.isHidden = false
+                            //cahaya.zPosition = 10
+                            //cahaya.isHidden = false
                             Character.shared.characterAnimationSkill(characterTexture: heroAmkaMachTextures, hero: hero, skill: Character.shared.amkaAnimationName)
                             backgroundMiniGames.isHidden = false
                             //blackNode.isHidden = false
@@ -686,6 +625,7 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                             matiLampu?.zPosition = 48
                             Character.shared.characterAnimationSkill(characterTexture: heroAmkaMachTextures, hero: hero, skill: Character.shared.amkaAnimationName)
                             backgroundMiniGames.isHidden = false
+                            isSecondTuas = true
                             
                             if backgroundMiniGames.isHidden == false {
                                 variantIdleAnimation()
@@ -719,6 +659,7 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                 if node.name == "keluarMiniGames" {
                     self.isPaused = false
                     backgroundMiniGames.isHidden = true
+                    backgroundOverlayGames.isHidden = true
                     connectVirtualController()
                     hero.isHidden = false
                     //blackNode.isHidden = true
@@ -832,20 +773,23 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
                         if !isSwitchTapped[index] {
                             let newSwitchTexure = SKTexture(imageNamed: "newGreenSwitch")
                             redSwitch[index].texture = newSwitchTexure
-                            nodeClicked += 1
                             isSwitchTapped[index] = true
                             
-                            if nodeClicked == 4 {
+                            if isSwitchTapped[0] && isSwitchTapped[1] && isSwitchTapped[2] && isSwitchTapped[3] {
                                 miniGamesCompleted()
                             }
                             
                         } else if isSwitchTapped[index] {
                             let newSwitchTexure = SKTexture(imageNamed: "newRedSwitch")
                             redSwitch[index].texture = newSwitchTexure
-                            nodeClicked -= 1
                             isSwitchTapped[index] = false
-                            if nodeClicked == -4 {
-                                secondMiniGames()
+                            
+                            if !isSwitchTapped[0] && !isSwitchTapped[1] && !isSwitchTapped[2] && !isSwitchTapped[3] {
+                                if isSecondTuas {
+                                    secondMiniGames()
+                                } else {
+                                    turnOffTheLamp()
+                                }
                             }
                         }
                     }
@@ -1247,26 +1191,23 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
     
     
     func addTimerNode() {
-        ellipse = SKShapeNode(ellipseOf: CGSize(width: size.width * 0.12, height: size.height * 0.19))
-        ellipse.position = CGPoint(x: frame.minX, y: frame.minY)
-        ellipse.fillColor = SKColor.clear
-        ellipse.strokeColor = SKColor(red: 0.24, green: 0.22, blue: 0.22, alpha: 1.0)
-        ellipse.lineWidth = 8.0
-        ellipse.zPosition = 100
-        ellipse.isHidden = true
-        cameraNode?.addChild(ellipse)
-        
+        ellipseNode = SKSpriteNode(imageNamed: "ellipse")
+        ellipseNode.size = CGSize(width: size.width * 0.12, height: size.height * 0.19)
+        ellipseNode.position = CGPoint(x: frame.minX, y: frame.minY)
+        ellipseNode.zPosition = 100
+        ellipseNode.isHidden = true
+        cameraNode?.addChild(ellipseNode)
+
         timerNode.zPosition = 100
         timerNode.position = CGPoint(x: frame.minX, y: frame.minY - 10)
         timerNode.fontSize = 40
         timerNode.fontColor = .white
         timerNode.isHidden = true
-        ellipse.addChild(timerNode)
-        time = 5
+        ellipseNode.addChild(timerNode)
+        time = 3
     }
     
     func addBackgroundMiniGames() {
-        
         backgroundMiniGames = SKSpriteNode(imageNamed: "newBackGroundMiniGames")
         backgroundMiniGames.zPosition = 53
         
@@ -1368,10 +1309,16 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
         turnOnTheLamp()
         Character.shared.characterAnimationSkill(characterTexture: heroAmkaMachTextures, hero: hero, skill: Character.shared.amkaAnimationName)
         self.isPaused = false
-        nodeClicked = 0
     }
     
     func secondMiniGames() {
+        turnOffTheLamp()
+        timerNode.isHidden = false
+        redNode.isHidden = false
+        ellipseNode.isHidden = false
+    }
+    
+    func turnOffTheLamp() {
         backgroundMiniGames.isHidden = true
         connectVirtualController()
         hero.isHidden = false
@@ -1388,10 +1335,6 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
         lampu1.isHidden = true
         lampu2.zPosition = 49
         lampu2.isHidden = true
-        timerNode.isHidden = false
-        redNode.isHidden = false
-        ellipse.isHidden = false
-        //blackNode.isHidden = true
         self.isPaused = false
         isJepangHidden = true
         jepangEnemy.isHidden = true
@@ -1413,6 +1356,21 @@ class StageTwo: SKScene, SKPhysicsContactDelegate {
         lampu2.zPosition = 49
         lampu2.isHidden = false
         backgroundOverlayGames.isHidden = true
+    }
+    
+    func heartReducation(heart: Int) {
+        lives -= heart
+        let lastElementIndex = heartsArray.count - 1
+        if heartsArray.indices.contains(lastElementIndex - 1) {
+            let lastHeart = heartsArray[lastElementIndex]
+            lastHeart.removeFromParent()
+            heartsArray.remove(at: lastElementIndex)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.isInvincible = false
+                //self.hero.removeAllActions()
+            }
+        }
     }
 }
 

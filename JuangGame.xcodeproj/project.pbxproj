@@ -11,7 +11,6 @@
 		33FCAE962B0CAAE800444A8B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE952B0CAAE800444A8B /* GameScene.swift */; };
 		33FCAE982B0CAAE800444A8B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE972B0CAAE800444A8B /* GameViewController.swift */; };
 		33FCAE9B2B0CAAE800444A8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAE992B0CAAE800444A8B /* Main.storyboard */; };
-		33FCAE9D2B0CAAE800444A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAE9C2B0CAAE800444A8B /* Assets.xcassets */; };
 		33FCAEA02B0CAAE800444A8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAE9E2B0CAAE800444A8B /* LaunchScreen.storyboard */; };
 		33FCAEF92B0CAB2A00444A8B /* BitMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEA82B0CAB2900444A8B /* BitMask.swift */; };
 		33FCAEFA2B0CAB2A00444A8B /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEAA2B0CAB2900444A8B /* SoundManager.swift */; };
@@ -72,9 +71,6 @@
 		33FCAF392B0CAB2A00444A8B /* CharacterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEF12B0CAB2A00444A8B /* CharacterScene.swift */; };
 		33FCAF3A2B0CAB2A00444A8B /* StageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEF22B0CAB2A00444A8B /* StageOne.swift */; };
 		33FCAF3B2B0CAB2A00444A8B /* CardStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEF32B0CAB2A00444A8B /* CardStage.swift */; };
-		33FCAF3C2B0CAB2A00444A8B /* SemarangGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEF52B0CAB2A00444A8B /* SemarangGameApp.swift */; };
-		33FCAF3D2B0CAB2A00444A8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEF62B0CAB2A00444A8B /* ContentView.swift */; };
-		33FCAF3E2B0CAB2A00444A8B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEF72B0CAB2A00444A8B /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +79,6 @@
 		33FCAE952B0CAAE800444A8B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		33FCAE972B0CAAE800444A8B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		33FCAE9A2B0CAAE800444A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		33FCAE9C2B0CAAE800444A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33FCAE9F2B0CAAE800444A8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33FCAEA82B0CAB2900444A8B /* BitMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitMask.swift; sourceTree = "<group>"; };
 		33FCAEAA2B0CAB2900444A8B /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
@@ -144,9 +139,6 @@
 		33FCAEF12B0CAB2A00444A8B /* CharacterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterScene.swift; sourceTree = "<group>"; };
 		33FCAEF22B0CAB2A00444A8B /* StageOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StageOne.swift; sourceTree = "<group>"; };
 		33FCAEF32B0CAB2A00444A8B /* CardStage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStage.swift; sourceTree = "<group>"; };
-		33FCAEF52B0CAB2A00444A8B /* SemarangGameApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemarangGameApp.swift; sourceTree = "<group>"; };
-		33FCAEF62B0CAB2A00444A8B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		33FCAEF72B0CAB2A00444A8B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,13 +171,9 @@
 		33FCAE8E2B0CAAE800444A8B /* JuangGame */ = {
 			isa = PBXGroup;
 			children = (
-				33FCAE8F2B0CAAE800444A8B /* AppDelegate.swift */,
-				33FCAE952B0CAAE800444A8B /* GameScene.swift */,
-				33FCAE972B0CAAE800444A8B /* GameViewController.swift */,
 				33FCAEF42B0CAB2A00444A8B /* Core */,
 				33FCAEE02B0CAB2A00444A8B /* Fonts */,
 				33FCAEAC2B0CAB2900444A8B /* Helper */,
-				33FCAEF72B0CAB2A00444A8B /* Helper.swift */,
 				33FCAEA92B0CAB2900444A8B /* Manager */,
 				33FCAEA72B0CAB2900444A8B /* Model */,
 				33FCAEAE2B0CAB2A00444A8B /* Multimedia */,
@@ -193,7 +181,6 @@
 				33FCAECD2B0CAB2A00444A8B /* Story Sceen */,
 				33FCAEE12B0CAB2A00444A8B /* Views */,
 				33FCAE992B0CAAE800444A8B /* Main.storyboard */,
-				33FCAE9C2B0CAAE800444A8B /* Assets.xcassets */,
 				33FCAE9E2B0CAAE800444A8B /* LaunchScreen.storyboard */,
 			);
 			path = JuangGame;
@@ -227,21 +214,8 @@
 		33FCAEAE2B0CAB2A00444A8B /* Multimedia */ = {
 			isa = PBXGroup;
 			children = (
-				33FCAEAF2B0CAB2A00444A8B /* Warsong.mp3 */,
-				33FCAEB02B0CAB2A00444A8B /* Story 3 - 2.wav */,
-				33FCAEB12B0CAB2A00444A8B /* Story 2.wav */,
-				33FCAEB22B0CAB2A00444A8B /* Story 3 - 1.wav */,
-				33FCAEB32B0CAB2A00444A8B /* Story 1.wav */,
-				33FCAEB42B0CAB2A00444A8B /* Story 5.wav */,
-				33FCAEB52B0CAB2A00444A8B /* keysCollected.wav */,
-				33FCAEB62B0CAB2A00444A8B /* Story 4.wav */,
-				33FCAEB72B0CAB2A00444A8B /* Story 6.wav */,
-				33FCAEB82B0CAB2A00444A8B /* alarmSound.wav */,
+				F7E881732B0DB5AD00828CA0 /* Sounds */,
 				33FCAEB92B0CAB2A00444A8B /* Assets.xcassets */,
-				33FCAEBA2B0CAB2A00444A8B /* storySound.mp3 */,
-				33FCAEBB2B0CAB2A00444A8B /* spySong.wav */,
-				33FCAEBC2B0CAB2A00444A8B /* cardPerStageMusic.mp3 */,
-				33FCAEBD2B0CAB2A00444A8B /* mulaiSound.wav */,
 			);
 			path = Multimedia;
 			sourceTree = "<group>";
@@ -325,10 +299,40 @@
 		33FCAEF42B0CAB2A00444A8B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				33FCAEF52B0CAB2A00444A8B /* SemarangGameApp.swift */,
-				33FCAEF62B0CAB2A00444A8B /* ContentView.swift */,
+				33FCAE8F2B0CAAE800444A8B /* AppDelegate.swift */,
+				33FCAE952B0CAAE800444A8B /* GameScene.swift */,
+				33FCAE972B0CAAE800444A8B /* GameViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		F7E881732B0DB5AD00828CA0 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F7E881742B0DB5C900828CA0 /* Condition */,
+				33FCAEBA2B0CAB2A00444A8B /* storySound.mp3 */,
+				33FCAEBB2B0CAB2A00444A8B /* spySong.wav */,
+				33FCAEBC2B0CAB2A00444A8B /* cardPerStageMusic.mp3 */,
+				33FCAEBD2B0CAB2A00444A8B /* mulaiSound.wav */,
+				33FCAEAF2B0CAB2A00444A8B /* Warsong.mp3 */,
+				33FCAEB02B0CAB2A00444A8B /* Story 3 - 2.wav */,
+				33FCAEB12B0CAB2A00444A8B /* Story 2.wav */,
+				33FCAEB22B0CAB2A00444A8B /* Story 3 - 1.wav */,
+				33FCAEB32B0CAB2A00444A8B /* Story 1.wav */,
+				33FCAEB42B0CAB2A00444A8B /* Story 5.wav */,
+				33FCAEB62B0CAB2A00444A8B /* Story 4.wav */,
+				33FCAEB72B0CAB2A00444A8B /* Story 6.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F7E881742B0DB5C900828CA0 /* Condition */ = {
+			isa = PBXGroup;
+			children = (
+				33FCAEB52B0CAB2A00444A8B /* keysCollected.wav */,
+				33FCAEB82B0CAB2A00444A8B /* alarmSound.wav */,
+			);
+			path = Condition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,7 +412,6 @@
 				33FCAF082B0CAB2A00444A8B /* storySound.mp3 in Resources */,
 				33FCAF122B0CAB2A00444A8B /* Wall.sks in Resources */,
 				33FCAE9B2B0CAAE800444A8B /* Main.storyboard in Resources */,
-				33FCAE9D2B0CAAE800444A8B /* Assets.xcassets in Resources */,
 				33FCAF0E2B0CAB2A00444A8B /* CardPerStageScene.sks in Resources */,
 				33FCAF052B0CAB2A00444A8B /* Story 6.wav in Resources */,
 				33FCAF0A2B0CAB2A00444A8B /* cardPerStageMusic.mp3 in Resources */,
@@ -437,7 +440,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33FCAF3C2B0CAB2A00444A8B /* SemarangGameApp.swift in Sources */,
 				33FCAE962B0CAAE800444A8B /* GameScene.swift in Sources */,
 				33FCAF382B0CAB2A00444A8B /* MissionOneScene.swift in Sources */,
 				33FCAF1F2B0CAB2A00444A8B /* MulaiScene.swift in Sources */,
@@ -445,7 +447,6 @@
 				33FCAF3A2B0CAB2A00444A8B /* StageOne.swift in Sources */,
 				33FCAF1B2B0CAB2A00444A8B /* SoundButtonStory.swift in Sources */,
 				33FCAEFC2B0CAB2A00444A8B /* Character.swift in Sources */,
-				33FCAF3D2B0CAB2A00444A8B /* ContentView.swift in Sources */,
 				33FCAF282B0CAB2A00444A8B /* MSKAnimatedLabel.swift in Sources */,
 				33FCAF1C2B0CAB2A00444A8B /* StoryDua.swift in Sources */,
 				33FCAF3B2B0CAB2A00444A8B /* CardStage.swift in Sources */,
@@ -459,7 +460,6 @@
 				33FCAF2B2B0CAB2A00444A8B /* GuessCode.swift in Sources */,
 				33FCAF302B0CAB2A00444A8B /* StageTwo.swift in Sources */,
 				33FCAF192B0CAB2A00444A8B /* StoryEnam.swift in Sources */,
-				33FCAF3E2B0CAB2A00444A8B /* Helper.swift in Sources */,
 				33FCAF2E2B0CAB2A00444A8B /* Tutorial.swift in Sources */,
 				33FCAF262B0CAB2A00444A8B /* Array+SKAction.swift in Sources */,
 				33FCAEF92B0CAB2A00444A8B /* BitMask.swift in Sources */,
@@ -618,7 +618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KS4TNRVTWF;
+				DEVELOPMENT_TEAM = LH73CAYKFH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Juang;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
@@ -651,7 +651,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KS4TNRVTWF;
+				DEVELOPMENT_TEAM = LH73CAYKFH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Juang;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.strategy-games";
