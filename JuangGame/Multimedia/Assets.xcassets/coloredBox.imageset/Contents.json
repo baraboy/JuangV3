@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "coloredBox.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
