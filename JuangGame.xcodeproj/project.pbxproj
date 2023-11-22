@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		16047E312B0DED5800D17AE6 /* Story 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E302B0DED5800D17AE6 /* Story 3.wav */; };
+		16047E382B0DF23200D17AE6 /* Story 5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E322B0DF23200D17AE6 /* Story 5.wav */; };
+		16047E392B0DF23200D17AE6 /* Story 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E332B0DF23200D17AE6 /* Story 1.wav */; };
+		16047E3A2B0DF23200D17AE6 /* Story 3 - 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E342B0DF23200D17AE6 /* Story 3 - 2.wav */; };
+		16047E3B2B0DF23200D17AE6 /* Story 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E352B0DF23200D17AE6 /* Story 2.wav */; };
+		16047E3C2B0DF23200D17AE6 /* Story 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E362B0DF23200D17AE6 /* Story 4.wav */; };
+		16047E3D2B0DF23200D17AE6 /* Story 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E372B0DF23200D17AE6 /* Story 6.wav */; };
+		16047E3F2B0DF27200D17AE6 /* Story 3 - 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 16047E3E2B0DF27200D17AE6 /* Story 3 - 1.wav */; };
 		33FCAE902B0CAAE800444A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE8F2B0CAAE800444A8B /* AppDelegate.swift */; };
 		33FCAE962B0CAAE800444A8B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE952B0CAAE800444A8B /* GameScene.swift */; };
 		33FCAE982B0CAAE800444A8B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAE972B0CAAE800444A8B /* GameViewController.swift */; };
@@ -18,14 +25,7 @@
 		33FCAEFB2B0CAB2A00444A8B /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEAB2B0CAB2900444A8B /* HapticManager.swift */; };
 		33FCAEFC2B0CAB2A00444A8B /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FCAEAD2B0CAB2900444A8B /* Character.swift */; };
 		33FCAEFD2B0CAB2A00444A8B /* Warsong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEAF2B0CAB2A00444A8B /* Warsong.mp3 */; };
-		33FCAEFE2B0CAB2A00444A8B /* Story 3 - 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB02B0CAB2A00444A8B /* Story 3 - 2.wav */; };
-		33FCAEFF2B0CAB2A00444A8B /* Story 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB12B0CAB2A00444A8B /* Story 2.wav */; };
-		33FCAF002B0CAB2A00444A8B /* Story 3 - 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB22B0CAB2A00444A8B /* Story 3 - 1.wav */; };
-		33FCAF012B0CAB2A00444A8B /* Story 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB32B0CAB2A00444A8B /* Story 1.wav */; };
-		33FCAF022B0CAB2A00444A8B /* Story 5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB42B0CAB2A00444A8B /* Story 5.wav */; };
 		33FCAF032B0CAB2A00444A8B /* keysCollected.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB52B0CAB2A00444A8B /* keysCollected.wav */; };
-		33FCAF042B0CAB2A00444A8B /* Story 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB62B0CAB2A00444A8B /* Story 4.wav */; };
-		33FCAF052B0CAB2A00444A8B /* Story 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB72B0CAB2A00444A8B /* Story 6.wav */; };
 		33FCAF062B0CAB2A00444A8B /* alarmSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB82B0CAB2A00444A8B /* alarmSound.wav */; };
 		33FCAF072B0CAB2A00444A8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEB92B0CAB2A00444A8B /* Assets.xcassets */; };
 		33FCAF082B0CAB2A00444A8B /* storySound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FCAEBA2B0CAB2A00444A8B /* storySound.mp3 */; };
@@ -76,6 +76,13 @@
 
 /* Begin PBXFileReference section */
 		16047E302B0DED5800D17AE6 /* Story 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 3.wav"; sourceTree = "<group>"; };
+		16047E322B0DF23200D17AE6 /* Story 5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 5.wav"; sourceTree = "<group>"; };
+		16047E332B0DF23200D17AE6 /* Story 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 1.wav"; sourceTree = "<group>"; };
+		16047E342B0DF23200D17AE6 /* Story 3 - 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 3 - 2.wav"; sourceTree = "<group>"; };
+		16047E352B0DF23200D17AE6 /* Story 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 2.wav"; sourceTree = "<group>"; };
+		16047E362B0DF23200D17AE6 /* Story 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 4.wav"; sourceTree = "<group>"; };
+		16047E372B0DF23200D17AE6 /* Story 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 6.wav"; sourceTree = "<group>"; };
+		16047E3E2B0DF27200D17AE6 /* Story 3 - 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 3 - 1.wav"; sourceTree = "<group>"; };
 		33FCAE8C2B0CAAE800444A8B /* JuangGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuangGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FCAE8F2B0CAAE800444A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33FCAE952B0CAAE800444A8B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -87,14 +94,7 @@
 		33FCAEAB2B0CAB2900444A8B /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		33FCAEAD2B0CAB2900444A8B /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		33FCAEAF2B0CAB2A00444A8B /* Warsong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Warsong.mp3; sourceTree = "<group>"; };
-		33FCAEB02B0CAB2A00444A8B /* Story 3 - 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 3 - 2.wav"; sourceTree = "<group>"; };
-		33FCAEB12B0CAB2A00444A8B /* Story 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 2.wav"; sourceTree = "<group>"; };
-		33FCAEB22B0CAB2A00444A8B /* Story 3 - 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 3 - 1.wav"; sourceTree = "<group>"; };
-		33FCAEB32B0CAB2A00444A8B /* Story 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 1.wav"; sourceTree = "<group>"; };
-		33FCAEB42B0CAB2A00444A8B /* Story 5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 5.wav"; sourceTree = "<group>"; };
 		33FCAEB52B0CAB2A00444A8B /* keysCollected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = keysCollected.wav; sourceTree = "<group>"; };
-		33FCAEB62B0CAB2A00444A8B /* Story 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 4.wav"; sourceTree = "<group>"; };
-		33FCAEB72B0CAB2A00444A8B /* Story 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Story 6.wav"; sourceTree = "<group>"; };
 		33FCAEB82B0CAB2A00444A8B /* alarmSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarmSound.wav; sourceTree = "<group>"; };
 		33FCAEB92B0CAB2A00444A8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33FCAEBA2B0CAB2A00444A8B /* storySound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = storySound.mp3; sourceTree = "<group>"; };
@@ -311,6 +311,13 @@
 		F7E881732B0DB5AD00828CA0 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				16047E3E2B0DF27200D17AE6 /* Story 3 - 1.wav */,
+				16047E332B0DF23200D17AE6 /* Story 1.wav */,
+				16047E352B0DF23200D17AE6 /* Story 2.wav */,
+				16047E342B0DF23200D17AE6 /* Story 3 - 2.wav */,
+				16047E362B0DF23200D17AE6 /* Story 4.wav */,
+				16047E322B0DF23200D17AE6 /* Story 5.wav */,
+				16047E372B0DF23200D17AE6 /* Story 6.wav */,
 				16047E302B0DED5800D17AE6 /* Story 3.wav */,
 				F7E881742B0DB5C900828CA0 /* Condition */,
 				33FCAEBA2B0CAB2A00444A8B /* storySound.mp3 */,
@@ -318,13 +325,6 @@
 				33FCAEBC2B0CAB2A00444A8B /* cardPerStageMusic.mp3 */,
 				33FCAEBD2B0CAB2A00444A8B /* mulaiSound.wav */,
 				33FCAEAF2B0CAB2A00444A8B /* Warsong.mp3 */,
-				33FCAEB02B0CAB2A00444A8B /* Story 3 - 2.wav */,
-				33FCAEB12B0CAB2A00444A8B /* Story 2.wav */,
-				33FCAEB22B0CAB2A00444A8B /* Story 3 - 1.wav */,
-				33FCAEB32B0CAB2A00444A8B /* Story 1.wav */,
-				33FCAEB42B0CAB2A00444A8B /* Story 5.wav */,
-				33FCAEB62B0CAB2A00444A8B /* Story 4.wav */,
-				33FCAEB72B0CAB2A00444A8B /* Story 6.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -404,11 +404,13 @@
 				33FCAF182B0CAB2A00444A8B /* MissionOneScene.sks in Resources */,
 				33FCAF0C2B0CAB2A00444A8B /* Kotak.sks in Resources */,
 				33FCAF232B0CAB2A00444A8B /* MulaiScene.sks in Resources */,
-				33FCAEFE2B0CAB2A00444A8B /* Story 3 - 2.wav in Resources */,
+				16047E3C2B0DF23200D17AE6 /* Story 4.wav in Resources */,
 				33FCAF062B0CAB2A00444A8B /* alarmSound.wav in Resources */,
 				33FCAF2A2B0CAB2A00444A8B /* StoryDua.sks in Resources */,
 				33FCAEFD2B0CAB2A00444A8B /* Warsong.mp3 in Resources */,
 				33FCAF0D2B0CAB2A00444A8B /* Duri.sks in Resources */,
+				16047E3A2B0DF23200D17AE6 /* Story 3 - 2.wav in Resources */,
+				16047E3B2B0DF23200D17AE6 /* Story 2.wav in Resources */,
 				33FCAF202B0CAB2A00444A8B /* StoryEmpat.sks in Resources */,
 				33FCAF072B0CAB2A00444A8B /* Assets.xcassets in Resources */,
 				33FCAF092B0CAB2A00444A8B /* spySong.wav in Resources */,
@@ -416,22 +418,20 @@
 				33FCAF122B0CAB2A00444A8B /* Wall.sks in Resources */,
 				33FCAE9B2B0CAAE800444A8B /* Main.storyboard in Resources */,
 				33FCAF0E2B0CAB2A00444A8B /* CardPerStageScene.sks in Resources */,
-				33FCAF052B0CAB2A00444A8B /* Story 6.wav in Resources */,
 				33FCAF0A2B0CAB2A00444A8B /* cardPerStageMusic.mp3 in Resources */,
-				33FCAF022B0CAB2A00444A8B /* Story 5.wav in Resources */,
 				16047E312B0DED5800D17AE6 /* Story 3.wav in Resources */,
 				33FCAF1A2B0CAB2A00444A8B /* StoryEnam.sks in Resources */,
+				16047E3F2B0DF27200D17AE6 /* Story 3 - 1.wav in Resources */,
 				33FCAF102B0CAB2A00444A8B /* StageOne.sks in Resources */,
+				16047E392B0DF23200D17AE6 /* Story 1.wav in Resources */,
 				33FCAF0F2B0CAB2A00444A8B /* BgPolos.sks in Resources */,
-				33FCAF002B0CAB2A00444A8B /* Story 3 - 1.wav in Resources */,
-				33FCAF042B0CAB2A00444A8B /* Story 4.wav in Resources */,
 				33FCAF152B0CAB2A00444A8B /* CharacterScene.sks in Resources */,
 				33FCAF172B0CAB2A00444A8B /* StageTwo.sks in Resources */,
 				33FCAEA02B0CAAE800444A8B /* LaunchScreen.storyboard in Resources */,
-				33FCAEFF2B0CAB2A00444A8B /* Story 2.wav in Resources */,
+				16047E3D2B0DF23200D17AE6 /* Story 6.wav in Resources */,
 				33FCAF1D2B0CAB2A00444A8B /* StoryTiga.sks in Resources */,
-				33FCAF012B0CAB2A00444A8B /* Story 1.wav in Resources */,
 				33FCAF222B0CAB2A00444A8B /* StoryLima.sks in Resources */,
+				16047E382B0DF23200D17AE6 /* Story 5.wav in Resources */,
 				33FCAF142B0CAB2A00444A8B /* TutorialScene.sks in Resources */,
 				33FCAF112B0CAB2A00444A8B /* SplashScene.sks in Resources */,
 			);

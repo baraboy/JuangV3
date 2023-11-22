@@ -105,7 +105,7 @@ class CardStage: SKScene {
             cardOne.removeAllActions()
         } else {
             cardTwo.size = CGSize(width: 120, height: 150)
-            cardTwo.texture = SKTexture(imageNamed: "cardLock")
+            cardTwo.texture = SKTexture(imageNamed: "cardLock1")
             cardTwo.position = CGPoint(x: -size.width * 0.11267606, y: -size.height * 0.20468957)
         }
         
